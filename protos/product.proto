@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package User;
+
+service UserService {
+  rpc getUser (Empty) returns (User) {}
+  rpc readProduct (Id) returns (User) {}
+}
+
+message readProduct {
+  string name = 1;
+  int32 age = 2;
+  string address = 3;
+}
+
+message User {
+  string name = 1;
+  int32 age = 2;
+  string address = 3;
+}
+
+message Id {
+  string id = 1;
+}
+
+message Empty {}
